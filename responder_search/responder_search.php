@@ -17,14 +17,23 @@
 
 class responder_search {
 
+  private static function search_array ($search, $array) {
+    foreach($array as $value) {
+      if (stristr($value, $search)) {
+        return true;
+      }
+    }
+    return false;
+  }
+
   /**
    * Returns a hard-coded array of responder data.
    * 
    * @param   void
    * @return  array  The responder's name, occupation, location, and status.
    */
-  public static function get_results() {
-    return array(
+  public static function get_results ($search, $occupation, $availability) {
+    $table = array(
        array('name' => 'Christopher Baker',
              'occupation' => 'Respiratory Therapist',
              'city' => 'Pittsburgh',
@@ -50,11 +59,35 @@ class responder_search {
             'status' => 'Available'
       )
     );
+
+    if ($search !== '' || $occupation !== 'All' || $availability !== 'All') {
+      $results = array();
+
+      foreach ($table as $resp) {
+        if ($occupation === 'All' || $resp['occupation'] === $occupation) {
+          if ($availability === 'All' || $resp['status'] === $availability) {
+            if ($search === '' || self::search_array($search, $resp)) {
+              array_push($results, $resp);
+            }
+          }
+        }
+      }
+
+      return $results;
+    }
+    else {
+      return $table;
+    }
   }
 
 }
 
-$results = responder_search::get_results();
+$results = responder_search::get_results(
+  trim($_GET['search']),
+  $_GET['occupation'],
+  $_GET['availability']
+);
+
 echo json_encode($results);
 
 ?>
