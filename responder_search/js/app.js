@@ -33,9 +33,14 @@ var App = (function() {
    */
   function displayResults() {
     $.ajax({
-      type: 'POST',
+      type: 'GET',
       url: 'responder_search.php',
       dataType: 'json',
+      data: {
+        'search': $('#search-field').val(),
+        'occupation': $('#occupation-filter').val(),
+        'availability': $('#availability-filter').val()
+      },
       success: function(data) {
         _results = data;
         _redrawTable();
@@ -62,12 +67,12 @@ var App = (function() {
     var rows = '';
     for (var i in _results) {
       var responder = _results[i];
-      rows += '<tr>' + 
-                '<td>' + responder.name + '</td>' + 
-                '<td>' + responder.occupation + '</td>' + 
-                '<td>' + responder.city + ', ' + responder.state + '</td>' + 
-                '<td>' + responder.status + '</td>' + 
-              '</tr>'; 
+      rows += '<tr>' +
+                '<td>' + responder.name + '</td>' +
+                '<td>' + responder.occupation + '</td>' +
+                '<td>' + responder.city + ', ' + responder.state + '</td>' +
+                '<td>' + responder.status + '</td>' +
+              '</tr>';
     }
     
     $('#responder_results tbody').html(rows);
@@ -84,4 +89,12 @@ var App = (function() {
 
 $(document).ready(function() {
   App.displayResults();
+
+  $('#search-form').on('submit', function (e) {
+    e.preventDefault();
+    App.displayResults();
+  });
+
+  $('#occupation-filter').on('change', App.displayResults);
+  $('#availability-filter').on('change', App.displayResults);
 });
