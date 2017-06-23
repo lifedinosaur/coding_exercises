@@ -18,6 +18,14 @@
 	border: none;
 }
 
+.user-login {
+	margin: 5px 0 25px;
+}
+
+.user-login .nav {
+	margin: 0;
+}
+
 .user-login p,
 .user-login .user-login-nav,
 .user-login .user-login-nav .nav li,
@@ -28,6 +36,7 @@
 .user-login p,
 .user-login .user-login-nav .nav li {
 	font-size: 12px;
+	margin-bottom: 0;
 }
 
 .user-login .user-login-nav .nav li a {
