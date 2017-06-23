@@ -2,6 +2,10 @@
 	border: none;
 }
 
+.nav-tabs > li {
+	margin: 0;
+}
+
 .nav-tabs > li > a,
 .nav-tabs > li > a:hover {
 	background: none;
@@ -31,6 +35,14 @@
 
 .user-login .username {
 	font-weight: bold;
+}
+
+.main-navbar {
+	position: relative;
+}
+
+.main-nav .nav {
+	margin: 0;
 }
 
 .main-nav .nav-tabs li a {
@@ -80,6 +92,42 @@
 
 .main-nav .nav-tabs .active .tab-title {
 	color: #fff;
+}
+
+.user-nav {
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.user-nav .nav li {
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.user-nav .nav li a {
+	background: none;
+	color: #888;
+}
+
+.user-nav .nav li a:hover {
+	color: #000;
+}
+
+.user-nav .nav .nav-title,
+.user-nav .nav .nav-icon {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.user-nav .nav .nav-icon {
+	background-image: url(../images/icons.png);
+	height: 14px;
+	width: 14px;
+}
+
+.user-nav .nav .messages {
+	background-position: 0 -14px;
 }
 
 .sub-nav {
