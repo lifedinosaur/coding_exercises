@@ -155,3 +155,24 @@
 .sub-nav {
 	background-image: url(../images/nav_bg.gif);
 }
+
+.sub-nav .nav {
+	margin: 0;
+}
+
+.sub-nav .nav-pills li a {
+	color: #fff;
+	margin: 6px 5px;
+	padding: 5px 8px;
+}
+
+.sub-nav .nav-pills li a:hover {
+	background: #4b7eb2;
+}
+
+.sub-nav .nav-pills .active a {
+	background: #4b7eb2;
+	-webkit-box-shadow: inset 0 0 10px 0 rgba(0,0,0,0.1);
+	-moz-box-shadow: inset 0 0 10px 0 rgba(0,0,0,0.1);
+	box-shadow: inset 0 0 10px 0 rgba(0,0,0,0.1);
+}
