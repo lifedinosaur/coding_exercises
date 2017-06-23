@@ -13,6 +13,26 @@
 	border: none;
 }
 
+.user-login p,
+.user-login .user-login-nav,
+.user-login .user-login-nav .nav li,
+.user-login .user-login-nav .nav li a {
+	display: inline-block;
+}
+
+.user-login p,
+.user-login .user-login-nav .nav li {
+	font-size: 12px;
+}
+
+.user-login .user-login-nav .nav li a {
+	background: none;
+}
+
+.user-login .username {
+	font-weight: bold;
+}
+
 .main-nav .nav-tabs li a {
 	padding: 6px 34px 6px 24px;
 	position: relative;
