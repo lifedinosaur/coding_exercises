@@ -1,0 +1,67 @@
+.nav-tabs {
+	border: none;
+}
+
+.nav-tabs > li > a,
+.nav-tabs > li > a:hover {
+	background: none;
+	border: none;
+}
+
+.nav-tabs > .active > a,
+.nav-tabs > .active > a:hover {
+	border: none;
+}
+
+.main-nav .nav-tabs li a {
+	padding: 6px 34px 6px 24px;
+	position: relative;
+}
+
+.main-nav .nav-tabs .tab {
+	background-image: url(../images/tab.png);
+	background-position: 0 0;
+	display: block;
+	height: 32px;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 50%;
+}
+
+.main-nav .nav-tabs .tab-end {
+	background-position: 100% 0;
+	left: auto;
+	right: 0;
+}
+
+.main-nav .nav-tabs li a:hover .tab-start {
+	background-position: 0 -32px;
+}
+
+.main-nav .nav-tabs li a:hover .tab-end {
+	background-position: 100% -32px;
+}
+
+.main-nav .nav-tabs li.active a .tab-start {
+	background-position: 0 32px;
+}
+
+.main-nav .nav-tabs li.active a .tab-end {
+	background-position: 100% 32px;
+}
+
+.main-nav .nav-tabs .tab-title {
+	color: #777;
+	font-weight: bold;
+	position: relative;
+	z-index: 3;
+}
+
+.main-nav .nav-tabs .active .tab-title {
+	color: #fff;
+}
+
+.sub-nav {
+	background-image: url(../images/nav_bg.gif);
+}
