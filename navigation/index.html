@@ -19,8 +19,62 @@
 		<meta charset="utf-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<title>Navigation Exercise</title>
+		<link href='css/bootstrap.min.css' rel='stylesheet' type='text/css' media="screen"/>
+		<link href='css/style.css' rel='stylesheet' type='text/css' media="screen"/>
 	</head>
-	<body>
 
+	<body>
+		<header>
+			<div class="user-login">
+				<p>Welcome, <span class="username">John Smith</span></p>
+				<p>(</p>
+				<nav class="user-login-nav">
+					<ul class="nav">
+						<li><a href="#">Preferences</a></li>
+						<li><a href="#">Log Out</a></li>
+					</ul>
+				</nav>
+				<p>)</p>
+			</div>
+
+			<nav class="main-nav">
+				<ul class="nav nav-tabs">
+					<li class="active"><a href="#patients" data-toggle="tab">Patients</a></li>
+					<li><a href="#incidents" data-toggle="tab">Incidents</a></li>
+					<li><a href="#reports" data-toggle="tab">Reports</a></li>
+					<li><a href="#property" data-toggle="tab">Property</a></li>
+					<li><a href="#location" data-toggle="tab">Location</a></li>
+				</ul>
+			</nav>
+
+			<nav class="user-nav">
+				<ul class="nav">
+					<li><a href="#"><span class="icon profile"><img src="images/icons.png" />Profile</a></li>
+					<li><a href="#"><span class="icon messages"><img src="images/icons.png" />Messages</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<div class="tab-content">
+			<div class="tab-pane active" id="patients">
+				<nav class="sub-nav">
+					<ul class="nav nav-pills">
+						<li class="active">
+							<a href="#">Search</a>
+						</li>
+						<li><a href="#">Groups</a></li>
+						<li><a href="#">Register</a></li>
+					</ul>
+				</nav>
+			</div>
+
+			<div class="tab-pane" id="incidents">...</div>
+			<div class="tab-pane" id="reports">...</div>
+			<div class="tab-pane" id="property">...</div>
+			<div class="tab-pane" id="location">...</div>
+		</div>
 	</body>
+	
+	<script type='text/javascript' src="js/jquery-1.11.1.js"></script>
+	<script type='text/javascript' src="js/bootstrap-tab.js"></script>
 </html>
