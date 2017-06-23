@@ -74,6 +74,12 @@ var App = (function() {
                 '<td>' + responder.status + '</td>' +
               '</tr>';
     }
+
+    if (!_results.length) {
+      rows =  '<tr>' +
+                '<td colspan="4"><p class="no-results">No Results...</p></td>' +
+              '</tr>';
+    }
     
     $('#responder_results tbody').html(rows);
   }
