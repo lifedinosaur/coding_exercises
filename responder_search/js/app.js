@@ -75,6 +75,7 @@ var App = (function() {
               '</tr>';
     }
 
+    // Add a 'no results' row for empty result set:
     if (!_results.length) {
       rows =  '<tr>' +
                 '<td colspan="4"><p class="no-results">No Results...</p></td>' +
@@ -96,11 +97,18 @@ var App = (function() {
 $(document).ready(function() {
   App.displayResults();
 
+  // Add listener for form submit event:
   $('#search-form').on('submit', function (e) {
     e.preventDefault();
     App.displayResults();
   });
 
+  // Add listeners for dropdown change events:
   $('#occupation-filter').on('change', App.displayResults);
   $('#availability-filter').on('change', App.displayResults);
+
+  // Add debounce for search field change event:
+  $('#search-field').on('input', _.debounce(function () {
+    App.displayResults();
+  }, 300));
 });
