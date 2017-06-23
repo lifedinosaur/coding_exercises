@@ -20,128 +20,143 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<title>Navigation Exercise</title>
 		<link href='css/bootstrap.min.css' rel='stylesheet' type='text/css' media="screen"/>
+		<link href='css/bootstrap-responsive.css' rel='stylesheet' type='text/css' media="screen"/>
 		<link href='css/style.css' rel='stylesheet' type='text/css' media="screen"/>
 	</head>
 
 	<body>
 		<header>
 			<div class="user-login">
-				<p>Welcome, <span class="username">John Smith</span></p>
-				<p>(</p>
-				<nav class="user-login-nav">
-					<ul class="nav">
-						<li><a href="#">Preferences</a><span> | </span></li>
-						<li><a href="#">Log Out</a></li>
-					</ul>
-				</nav>
-				<p>)</p>
+				<div class="container">
+					<p>Welcome, <span class="username">John Smith</span></p>
+					<p>(</p>
+					<nav class="user-login-nav">
+						<ul class="nav">
+							<li><a href="#">Preferences</a><span> | </span></li>
+							<li><a href="#">Log Out</a></li>
+						</ul>
+					</nav>
+					<p>)</p>
+				</div>
 			</div>
 			
-			<div class="main-navbar">
-				<nav class="main-nav">
-					<ul class="nav nav-tabs">
-						<li class="active">
-							<a href="#patients" data-toggle="tab">
-								<span class="tab tab-start"></span>
-								<span class="tab-title">Patients</span>
-								<span class="tab tab-end"></span>
-							</a>
-						</li>
-						<li>
-							<a href="#incidents" data-toggle="tab">
-								<span class="tab tab-start"></span>
-								<span class="tab-title">Incidents</span>
-								<span class="tab tab-end"></span>
-							</a>
-						</li>
-						<li>
-							<a href="#reports" data-toggle="tab">
-								<span class="tab tab-start"></span>
-								<span class="tab-title">Reports</span>
-								<span class="tab tab-end"></span>
-							</a>
-						</li>
-						<li>
-							<a href="#property" data-toggle="tab">
-								<span class="tab tab-start"></span>
-								<span class="tab-title">Property</span>
-								<span class="tab tab-end"></span>
-							</a>
-						</li>
-						<li>
-							<a href="#location" data-toggle="tab">
-								<span class="tab tab-start"></span>
-								<span class="tab-title">Location</span>
-								<span class="tab tab-end"></span>
-							</a>
-						</li>
-					</ul>
-				</nav>
-
-				<nav class="user-nav">
-					<ul class="nav">
-						<li>
-							<a href="#">
-								<span class="nav-icon profile"></span>
-								<span class="nav-title">Profile<span>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<span class="nav-icon messages"></span>
-								<span class="nav-title">Messages</span>
-							</a>
-						</li>
-					</ul>
-				</nav>
+			<div class="container">
+				<div class="main-navbar">
+					<nav class="user-nav">
+						<ul class="nav">
+							<li>
+								<a href="#">
+									<span class="nav-icon profile"></span>
+									<span class="nav-title">Profile<span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<span class="nav-icon messages"></span>
+									<span class="nav-title">Messages</span>
+								</a>
+							</li>
+						</ul>
+					</nav>
+					
+					<nav class="main-nav">
+						<ul class="nav nav-tabs">
+							<li class="active">
+								<a href="#patients" data-toggle="tab">
+									<span class="tab tab-start"></span>
+									<span class="tab-title">Patients</span>
+									<span class="tab tab-end"></span>
+								</a>
+							</li>
+							<li>
+								<a href="#incidents" data-toggle="tab">
+									<span class="tab tab-start"></span>
+									<span class="tab-title">Incidents</span>
+									<span class="tab tab-end"></span>
+								</a>
+							</li>
+							<li>
+								<a href="#reports" data-toggle="tab">
+									<span class="tab tab-start"></span>
+									<span class="tab-title">Reports</span>
+									<span class="tab tab-end"></span>
+								</a>
+							</li>
+							<li>
+								<a href="#property" data-toggle="tab">
+									<span class="tab tab-start"></span>
+									<span class="tab-title">Property</span>
+									<span class="tab tab-end"></span>
+								</a>
+							</li>
+							<li>
+								<a href="#location" data-toggle="tab">
+									<span class="tab tab-start"></span>
+									<span class="tab-title">Location</span>
+									<span class="tab tab-end"></span>
+								</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
 			</div>
 		</header>
 
 		<div class="tab-content">
 			<div class="tab-pane active" id="patients">
 				<nav class="sub-nav">
-					<ul class="nav nav-pills">
-						<li><a href="#">Search</a></li>
-						<li class="active"><a href="#">Groups</a></li>
-						<li><a href="#">Register</a></li>
-					</ul>
+					<div class="container">
+						<ul class="nav nav-pills">
+							<li><a href="#">Search</a></li>
+							<li class="active"><a href="#">Groups</a></li>
+							<li><a href="#">Register</a></li>
+						</ul>
+					</div>
 				</nav>
 			</div>
 
 			<div class="tab-pane" id="incidents">
 				<nav class="sub-nav">
-					<ul class="nav nav-pills">
-						<li class="active"><a href="#">Search</a></li>
-						<li><a href="#">Groups</a></li>
-						<li><a href="#">Register</a></li>
-					</ul>
+					<div class="container">
+						<ul class="nav nav-pills">
+							<li class="active"><a href="#">Search</a></li>
+							<li><a href="#">Groups</a></li>
+							<li><a href="#">Register</a></li>
+						</ul>
+					</div>
 				</nav>
 			</div>
 			<div class="tab-pane" id="reports">
 				<nav class="sub-nav">
-					<ul class="nav nav-pills">
-						<li><a href="#">Search</a></li>
-						<li><a href="#">Groups</a></li>
-						<li class="active"><a href="#">Register</a></li>
-					</ul>
+					<div class="container">
+						<ul class="nav nav-pills">
+							<li><a href="#">Search</a></li>
+							<li><a href="#">Groups</a></li>
+							<li class="active"><a href="#">Register</a></li>
+						</ul>
+					</div>
 				</nav>
 			</div>
 			<div class="tab-pane" id="property">
 				<nav class="sub-nav">
-					<ul class="nav nav-pills">
-						<li class="active"><a href="#">Search</a></li>
-						<li><a href="#">Groups</a></li>
-						<li><a href="#">Register</a></li>
-					</ul>
+					<div class="container">
+						<ul class="nav nav-pills">
+							<li class="active"><a href="#">Search</a></li>
+							<li><a href="#">Groups</a></li>
+							<li><a href="#">Register</a></li>
+						</ul>
+					</div>
 				</nav>
 			</div>
 			<div class="tab-pane" id="location">
 				<nav class="sub-nav">
-					<ul class="nav nav-pills">
-						<li><a href="#">Search</a></li>
-						<li><a href="#">Groups</a></li>
-						<li class="active"><a href="#">Register</a></li>
-					</ul>
+					<div class="container">
+						<ul class="nav nav-pills">
+							<li><a href="#">Search</a></li>
+							<li><a href="#">Groups</a></li>
+							<li class="active"><a href="#">Register</a></li>
+						</ul>
+					</div>
 				</nav>
 			</div>
 		</div>
